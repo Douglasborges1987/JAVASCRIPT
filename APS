@@ -1,0 +1,43 @@
+/*Disciplina: JavaScript
+Código da turma: 963N
+Nome: Douglas Borges de Oliveira
+Matricula: 2024100844
+*/
+
+
+
+
+function isPrime(num) {
+if num<2 {
+   return false;
+}
+for(let i=num-1; i>=2; i--) {
+    let resto = num % i;
+    if(resto == 0){
+        return false;
+    }
+} return true;
+}
+
+
+function FindLargestPrimes(num, x1) {
+    let contador =0;
+    for(let i=num; i>=2; i--) {
+        let ehPrimo = isPrime(i)
+        if (ehPrimo) {
+            console.log ("O numero " + i + " é primo")
+            contador++;
+            if(contador == x1){
+                return;
+            }
+        }
+    }
+}
+
+let num = Number.parseInt(prompt("Digite um número: "));
+let x1 = Number.parseInt(prompt("Digite quantidade: "));
+FindLargestPrimes(num, x1)
+
+
+
+
